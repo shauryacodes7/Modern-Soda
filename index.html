@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Soda Page - By Shaurya</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Hide the second section initially */
+      .desc-sec.accor-2 {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="section-fluid-main">
+      <div class="section">
+        <div class="info-wrap mob-margin">
+          <p class="title-up">Modern soda</p>
+          <h2 id="soda-name">Coke Zero</h2>
+          <h4 id="price">₹15 <span>₹50</span></h4>
+          <div class="section-fluid">
+            <input
+              class="desc-btn"
+              type="radio"
+              id="desc-1"
+              name="desc-btn"
+              checked
+              onclick="showDescription()"
+            />
+            <label for="desc-1">Description</label>
+            <input
+              class="desc-btn"
+              type="radio"
+              id="desc-2"
+              name="desc-btn"
+              onclick="showDetails()"
+            />
+            <label for="desc-2">Details</label>
+            <div class="section-fluid desc-sec accor-1">
+              <p id="soda-description">
+                A zero-calorie soda with the classic taste of Coca-Cola. It
+                contains no sugar and is sweetened with artificial sweeteners,
+                making it a popular choice for calorie-conscious individuals.
+              </p>
+            </div>
+            <div class="section-fluid desc-sec accor-2">
+              <div class="section-inline">
+                <p><span id="calories">0</span>cal<br />Calories</p>
+              </div>
+              <div class="section-inline">
+                <p><span id="sugar">0</span>g<br />Sugar</p>
+              </div>
+              <div class="section-inline">
+                <p><span id="caffeine">34</span>mg<br />Caffeine</p>
+              </div>
+              <div class="section-inline">
+                <p><span id="volume">42</span>oz<br />Volume</p>
+              </div>
+            </div>
+          </div>
+          <h5>Choose Color:</h5>
+        </div>
+        <input
+          class="color-btn for-color-1"
+          type="radio"
+          id="color-1"
+          name="color-btn"
+          checked
+          onclick="changeSodaContent('Coke Zero', 'A zero-calorie soda with the classic taste of Coca-Cola. It contains no sugar and is sweetened with artificial sweeteners, making it a popular choice for calorie-conscious individuals.', '0', '0', '34', '12', '₹15', '₹50')"
+        />
+        <label class="first-color" for="color-1"></label>
+        <input
+          class="color-btn for-color-2"
+          type="radio"
+          id="color-2"
+          name="color-btn"
+          onclick="changeSodaContent('Mountain Dew', 'A citrus-flavored soda known for its high caffeine content and bright green color. It offers a sweet, tangy taste with a refreshing, invigorating kick, perfect for those seeking an energy boost.', '170', '46', '54', '12', '₹25', '₹50')"
+        />
+        <label class="color-2" for="color-2"></label>
+        <input
+          class="color-btn for-color-3"
+          type="radio"
+          id="color-3"
+          name="color-btn"
+          onclick="changeSodaContent('Red Bull', 'Technically an energy drink, Red Bull has a unique sweet-tart flavor and is known for its caffeine content and taurine. It’s popular among people looking for increased alertness and energy.', '110', '27', '80', '8.4', '₹35', '₹50')"
+        />
+        <label class="color-3" for="color-3"></label>
+        <input
+          class="color-btn for-color-4"
+          type="radio"
+          id="color-4"
+          name="color-btn"
+          onclick="changeSodaContent('Coca-Cola Classic', 'The original cola drink with a distinctive flavor profile combining sweetness and a slight hint of vanilla. It\'s one of the world\'s most popular soft drinks, loved for its refreshing and iconic taste.', '140', '39', '34', '12', '₹45', '₹50')"
+        />
+        <label class="color-4" for="color-4"></label>
+        <input
+          class="color-btn for-color-5"
+          type="radio"
+          id="color-5"
+          name="color-btn"
+          onclick="changeSodaContent('Sprite', 'A clear, lemon-lime flavored soda with a crisp, refreshing taste. It contains no caffeine and is known for its clean, light, and citrusy flavor that’s perfect for quenching thirst.', '140', '38', '0', '12', '₹55', '₹50')"
+        />
+        <label class="color-5" for="color-5"></label>
+        <input
+          class="color-btn for-color-6"
+          type="radio"
+          id="color-6"
+          name="color-btn"
+          onclick="changeSodaContent('Fanta', 'A fruit-flavored soda available in various flavors, with orange being the most popular. It offers a sweet and tangy taste, often characterized by its vibrant colors and bubbly, fizzy texture.', '160', '44', '0', '12', '₹65', '₹50')"
+        />
+        <label class="color-6" for="color-6"></label>
+        <div class="info-wrap">
+          <a href="#" class="btn"
+            ><i class="uil uil-shopping-cart icon"></i> Add To Cart</a
+          >
+        </div>
+        <div class="img-wrap soda-1"></div>
+        <div class="img-wrap soda-2"></div>
+        <div class="img-wrap soda-3"></div>
+        <div class="img-wrap soda-4"></div>
+        <div class="img-wrap soda-5"></div>
+        <div class="img-wrap soda-6"></div>
+        <div class="back-color"></div>
+        <div class="back-color soda-2"></div>
+        <div class="back-color soda-3"></div>
+        <div class="back-color soda-4"></div>
+        <div class="back-color soda-5"></div>
+        <div class="back-color soda-6"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript to handle content and section visibility -->
+    <script>
+      function changeSodaContent(
+        name,
+        description,
+        calories,
+        sugar,
+        caffeine,
+        volume,
+        price,
+        originalPrice
+      ) {
+        // Update the <h2> tag content
+        document.getElementById("soda-name").textContent = name;
+        // Update the <p> tag content in the description section if desc-1 is checked
+        if (document.getElementById("desc-1").checked) {
+          document.getElementById("soda-description").textContent = description;
+        }
+        // Update the details section if desc-2 is checked
+        if (document.getElementById("desc-2").checked) {
+          document.getElementById("calories").textContent = calories;
+          document.getElementById("sugar").textContent = sugar;
+          document.getElementById("caffeine").textContent = caffeine;
+          document.getElementById("volume").textContent = volume;
+        }
+        // Update the price based on the selected color
+        document.getElementById(
+          "price"
+        ).innerHTML = `${price} <span>${originalPrice}</span>`;
+      }
+
+      function showDescription() {
+        document.querySelector(".desc-sec.accor-1").style.display = "block";
+        document.querySelector(".desc-sec.accor-2").style.display = "none";
+      }
+
+      function showDetails() {
+        document.querySelector(".desc-sec.accor-1").style.display = "none";
+        document.querySelector(".desc-sec.accor-2").style.display = "block";
+      }
+
+      // Initialize the page with the correct section displayed
+      showDescription(); // Show description section by default
+    </script>
+  </body>
+</html>
